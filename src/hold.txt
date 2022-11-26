@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+img { 
+  size: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 15%;
+  float: left;
+  transition: transform .5s;
+  margin: 0 5px;
+}
+
+img:hover {
+  transform:scale(1.15);
+}
+
+.App {
+  width: 100%;
+  height: 100px;
+  background-color:lightskyblue;
+  overflow: scroll hidden;
+  white-space: nowrap; 
+}
+
+      <Picture pictureSrc="https://m.media-amazon.com/images/I/A13usaonutL._AC_CLa%7C2140%2C2000%7C41zNBYD-MTL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_UY1000_.png"/>     
+
+const Picture = (props) => {
+  return (
+    <img src={props.pictureSrc} />
+  )
+}
