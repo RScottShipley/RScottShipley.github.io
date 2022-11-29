@@ -1,7 +1,7 @@
 html, body, #root, .App {
   width: 100%;
   height: 100%;
-  background-color:aliceblue;
+  background-color:white;
 }
 
 * {
@@ -24,6 +24,7 @@ html, body, #root, .App {
   height: 15%;
   min-height: 100px;
   flex-grow: 1;
+  color: black;
 }
 
 .Header h1 {
@@ -73,7 +74,7 @@ html, body, #root, .App {
 .Brand-Header h1 {
   font-weight: bolder;
   font-family:Georgia, 'Times New Roman', Times, serif;
-  
+  font-size: 24;
 }
 
 .Brand-Picture-Wheel {

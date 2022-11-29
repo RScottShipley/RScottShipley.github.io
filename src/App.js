@@ -31,7 +31,7 @@ const FullApp = () => {
 const Header = () => {
   return (
     <div className="Header Redborder">
-      <h1>Cultivate</h1>
+      <h1>CULTIVATE</h1>
     </div>
   );
 }
@@ -45,7 +45,8 @@ const Brand = (props) => {
       <Brandheader name={props.name} 
       homepage={props.homepage}/>
       <PictureWheel pictures={props.pictures}
-      homepage={props.homepage}/>
+      homepage={props.homepage}
+      tags={props.tags}/>
     </div>
   )
 }
@@ -75,10 +76,15 @@ const PictureWheel = (props) => {
       {pictures.map(picture => {
         return <Picture pictureSrc={picture} homepage={props.homepage} />
       })}
+      <div className="Tags-Under Redborder" >
+
+      </div>
     </div>
   );
-
 }
+
+//Establish a tag component to flow with the pictures
+
 
 //Pictures for framing the images and storing them into wheels
 const Picture = (props) => {
@@ -92,7 +98,7 @@ const Picture = (props) => {
 const Brandheader = (props) => {
   return (
     <div className="Brand-Header Redborder">
-      <h1>{props.name}</h1>
+      <h1>{props.name.toUpperCase()}</h1>
     </div>
   )
 }
@@ -122,7 +128,7 @@ let data = [
   {
       "name": "Rouje",
       "homepage": "https://us.rouje.com",
-      "pictures": "https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/b/a/baguette-crocobeige-1.jpg; https://media.cdn-rouje.com/html/2021-08-11/img/desktop/v17.png, https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/l/o/lola-brodeeecru-1.jpg; https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/c/h/chloe-unirose-1.jpg; https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/d/a/daria-mixmatchrouge-1.jpg; https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/l/o/look8_rouje_ben__ryanbrabazon.jpg",
+      "pictures": "https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/b/a/baguette-crocobeige-1.jpg; https://media.cdn-rouje.com/html/2021-08-11/img/desktop/v17.png; https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/l/o/lola-brodeeecru-1.jpg; https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/c/h/chloe-unirose-1.jpg; https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/d/a/daria-mixmatchrouge-1.jpg; https://media.cdn-rouje.com/cdn-cgi/image/width=938,height=1407,quality=66,v=6,f=auto/media/catalog/product/l/o/look8_rouje_ben__ryanbrabazon.jpg",
       "bio": "About Rouje: Jeanne Damas spent her childhood playing between the tables of her parents’ restaurant near Bastille. Barely taller than the counter, she liked to watch people eating, laughing, flirting, and conversing about anything and everything. In a way, that’s how Rouje came to be: from those memories, those Parisians she was observing, those women whose lives she marveled at. \n\nHer first icon is her mother. A woman with a very distinctive feminine style. As a teenager, she used to spend hours in the atelier of her neighbor, the fashion designer Nathalie Dumeix. She starts getting into photography, in front of the lens and behind it. Over the years, she trained her eye - as a model, as a muse, and as a creative director for capsule collections. These experiences cemented the looks she creates in her mind, all sharing that special something\n\nIn 2016, Rouje was born. Helped by a tight-knit group of creative friends, Jeanne directs and reinvents her dream wardrobe season after season: clothes designed by women, for women. As well as accessories and a beauty line, made to highlight women’s own personal styles and to let them express their femininity freely. \n\nJeanne Damas has always been inspired by the women around her and wanted to put them at the forefront. And to help those in need too: since 2016, Rouje has been supporting women rights charities. In 2021, Jeanne goes further by becoming an ambassador for La Maison des femmes of Saint-Denis.",
       "ID": "3",
       "price": "$$$",
